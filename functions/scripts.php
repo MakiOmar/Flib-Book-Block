@@ -30,7 +30,7 @@ add_action('wp_enqueue_scripts',function() {
 		ABBL_URI . 'css/demo1.css', 
 		false,
 		filemtime(
-			wp_normalize_path(ABBL_DIR . 'css/demo1.css' )
+			wp_normalize_path(ABBL_DIR . 'css/demo'.ABBL_LAYOUT.'.css' )
 		) 
 	);
 
@@ -57,10 +57,10 @@ add_action('wp_enqueue_scripts',function() {
 		
 	wp_register_script( 
 		'abbl-jquery-bookblock' , 
-		ABBL_URI . 'jquery.bookblock.min.js' ,
+		ABBL_URI . 'js/jquery.bookblock.min.js' ,
 		['jquery'],
 		filemtime(
-			wp_normalize_path(ABBL_DIR . 'jquery.bookblock.min.js' )
+			wp_normalize_path(ABBL_DIR . 'js/jquery.bookblock.min.js' )
 		), 
 		true 
 	);
@@ -68,10 +68,10 @@ add_action('wp_enqueue_scripts',function() {
 		
 	wp_register_script( 
 		'abbl-custom' , 
-		ABBL_URI . 'abbl-custom.js' ,
+		ABBL_URI . 'js/abbl-custom.js' ,
 		['abbl-jquery-bookblock'],
 		filemtime(
-			wp_normalize_path(ABBL_DIR . 'abbl-custom.js' )
+			wp_normalize_path(ABBL_DIR . 'js/abbl-custom.js' )
 		), 
 		true 
 	);

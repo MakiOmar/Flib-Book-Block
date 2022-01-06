@@ -16,7 +16,7 @@ var Page = (function() {
 			initEvents();
 		},
 		initEvents = function() {
-			
+			$(".bb-item:first-child").css('display', 'block');
 			var $slides = config.$bookBlock.children();
 
 			// add navigation events
