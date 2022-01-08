@@ -20,7 +20,7 @@ define('ABBL_DIR', wp_normalize_path( plugin_dir_path( __FILE__ )) );
 define('ABBL_URI', plugin_dir_url( __FILE__ ));
 
 //Book layout
-define('ABBL_LAYOUT', '1');
+define('ABBL_LAYOUT', '4');
 
 require_once(ABBL_DIR . 'functions/scripts.php');
 
@@ -28,18 +28,28 @@ require_once(ABBL_DIR . 'functions/scripts.php');
 add_action( 'init', function(){
 	load_plugin_textdomain(ABBL_DOMAIN , false,  dirname( plugin_basename( __FILE__ ) ) . '/languages');
 } );
-
-$layout = '1';
 add_shortcode('abbl-bookblock', function($atts){
-
-	wp_enqueue_script('abbl-modernizr-custom');
-	wp_enqueue_script('abbl-jquerypp-custom');
-	wp_enqueue_script('abbl-jquery-bookblock');
-	wp_enqueue_script('abbl-custom');
 	ob_start(); 
 	include ABBL_DIR . 'layouts/demo'.ABBL_LAYOUT.'.php';
-	return ob_get_clean();
+	$html =  ob_get_clean();
+	
+	wp_enqueue_script('abbl-modernizr-custom');
+	wp_enqueue_script('abbl-jquery-bookblock');
+	wp_enqueue_script('abbl-jquerypp-custom');
+	wp_enqueue_script('abbl-custom-'.ABBL_LAYOUT);
+	
+	return $html;
+	
+	
 
 });
+
+add_action('wp_footer', function(){?>
+		<script>
+			jQuery(document).ready(function($){
+				$('html').addClass('no-js demo-<?php echo ABBL_LAYOUT ?>');
+			});
+		</script>	
+<?php });
 
 ?>

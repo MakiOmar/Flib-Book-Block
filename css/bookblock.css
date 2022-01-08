@@ -2,19 +2,23 @@
 	width: 400px;
 	height: 300px;
 	margin: 0 auto;
-	position: relative;
+	position: absolute;
 	z-index: 100;
 	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
 	perspective: 1300px;
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
 .bb-page {
 	position: absolute;
 	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: transform;
 	transition-property: transform;
 }
 
@@ -23,6 +27,7 @@
 	height: 100%;
 	left: 50%;
 	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
 	transform-origin: left center;
 }
 
@@ -31,6 +36,7 @@
 	height: 50%;
 	top: 50%;
 	-webkit-transform-origin: center top;
+	-moz-transform-origin: center top;
 	transform-origin: center top;
 }
 
@@ -44,6 +50,7 @@
 	top: 0;
 	left: 0;
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
