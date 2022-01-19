@@ -256,13 +256,17 @@
 				speed = this.end ? 400 : this.options.speed;
 
 			this.$items.hide();
+			
 			this.$el.prepend( $s_left, $s_middle, $s_right );
 			
 			$s_middle.css({
 				transitionDuration: speed + 'ms',
 				transitionTimingFunction : this.options.easing
+				
 			}).on( this.transEndEventName, function( event ) {
+			    
 				if ( $( event.target ).hasClass( 'bb-page' ) ) {
+				   //debugger;
 					self.$el.children( '.bb-page' ).remove();
 					self.$nextItem.show();
 					self.end = false;

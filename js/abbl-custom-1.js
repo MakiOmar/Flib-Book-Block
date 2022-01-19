@@ -19,6 +19,7 @@ jQuery(document).ready(function($){
 		},
 		initEvents = function() {
 			$(".bb-item:first-child").css('display', 'block');
+			$('html').addClass('no-js demo-1');
 			var $slides = config.$bookBlock.children();
 
 			// add navigation events

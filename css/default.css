@@ -241,6 +241,7 @@ a img {
 .demo-4 body {
 	color: #999;
 	background: #fff2e3;
+	overflow: hidden;
 }
 
 .demo-4 a {

@@ -1,0 +1,221 @@
+.demo-4 body{
+    height:100vh;
+}
+.catalogue-itme{
+    text-align:center;
+    position: relative;
+    height: 50%;
+    float:left;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    
+}
+.page-content{
+    width: 100%;
+    height: calc(100% - 45px);
+    margin-top: -10px;
+}
+.page-style-4 .header-gallery-items{
+    position:relative;
+    height : 30%;
+    width:100%;
+}
+.header-gallery-item{
+    height : 100%;
+    width:100%;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position:absolute;
+    overflow:hidden;
+}
+.page-style-4 .bb-custom-side{
+    display:block;
+}
+.page-style-4 .catalogue-itme{
+    height:calc(70% - 45px);
+    float:left;
+}
+.page-style-4 .product-image{
+    max-width:80%;
+    max-height: 80%;
+    position: absolute;
+bottom: 10px;
+}
+.catalogue-itme.catalogue-style-2{
+    height: calc( 100% - 45px );
+    display: inline-block;
+}
+
+.catalogue-itme.catalogue-style-3{
+    height: calc( 100% - 150px );
+    display: inline-flex;
+}
+.bb-custom-side.last-page img{
+    height:70%;
+}
+#bb-bookblock .bb-item .bb-custom-side.last-page, #bb-bookblock .bb-page .last-page{
+    display:flex;
+    justify-content: center;
+    background-image: unset;
+}
+.page-style-3 .bb-custom-side, .page-style-3 .bb-page,.page-style-3 .bb-content{
+    display:block;
+}
+
+.page-style-3 .catalogue-itme h3.catalogue-itme-title{
+    background: none;
+margin-top: 20px !important;
+}
+.bb-custom-wrapper > nav {
+	display: flex;
+	justify-content: center;
+}
+div.bb-custom-wrapper > nav a {
+	margin: 0 2px;
+}
+.catalogue-cats{
+    background: #0000009c;
+    color: #fff;
+    border: 1px solid #ffffff8c;
+    border-radius: 5px;
+}
+.catalogue-style2-top-section, .catalogue-style2-bottom-section{
+    display:flex;
+    flex-direction: column;
+    height: 50%;
+    position:relative;
+}
+.catalogue-style2-top-section > div{
+    display:flex;
+    justify-content: center;
+}
+.product-image{
+    max-height: 100%;
+}
+.catalogue-itme.catalogue-style-3 .product-image{
+    width: 100%;
+}
+.product-image-link{
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.bb-bookblock div.bb-item, .bb-bookblock .bb-custom-firstpage h1{
+    background:transparent;
+}
+.catalogue-itme h3.catalogue-itme-title{
+    text-align:center;
+    color:#D24040;
+    font-weight:bold;
+    font-size:16px;
+    border-radius: 0;
+    background: url(' https://jupiter.makiomar.com/catalogue/wp-content/uploads/2022/01/title-bg.jpg');
+	background-size: auto;
+	background-size: cover;
+	padding: 5px 0;
+	margin: 3px 0 !important;
+}
+
+.catalogue-style2-top-section h3.catalogue-itme-title{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+h3.catalogue-itme-title .catalogue-item-details-link{
+    font-size:14px;
+    color:#ae8421;
+}
+.bb-custom-side img.book-cover{
+    display:block;
+    height:100%;
+    width:100%;
+}
+.bb-bookblock .bb-custom-side {
+    border-radius: 10px;
+    border: 1px solid #000;
+    position:relative;
+    overflow:hidden;
+    justify-content:flex-start;
+}
+.bb-page{
+    border-radius: 10px!important;
+    /*border: 1px solid #000;
+    -webkit-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.70);
+    -moz-box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.70);
+    box-shadow: 0px 9px 27px -6px rgba(0,0,0,0.70);*/
+    
+}
+
+.bb-page .bb-content{
+    background: transparent;
+}
+
+.bb-page, .bb-page *{
+    border-radius: 10px;
+}
+.side-header{
+    padding:0 10px;
+    height:35px;
+    width:100%;
+    border-radius:10px 10px 0 0;
+    background-color:#D24040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.side-header .catalogue-header-link{
+    color:#d97878;
+    letter-spacing: 4px;
+}
+.bb-custom-wrapper h3.catalogue-page-title{
+    color: #111;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.side-content{
+    width:100%;
+    position:relative;
+}
+.catalogue-side-footer{
+    width:100%;
+    height:10px;
+    display: flex;
+    position:absolute;
+    bottom:0;
+}
+.footer-section{
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius:0!important;
+}
+.footer-section:nth-child(even){
+    background-color:#554a21;
+}
+.footer-section:nth-child(odd){
+    background-color:#847354;
+}
+.bb-bookblock  .page-number{
+    position: absolute;
+width: 40px;
+height: 20px;
+background-color: #373737;
+text-align: center;
+display:flex;
+align-items:center;
+justify-content:center;
+color: #fff;
+bottom: 0;
+left: 0;
+z-index: 300;
+}
+.bb-bookblock  .bb-custom-side:nth-child(even) .page-number{
+    left: auto;
+    right:0;
+}
