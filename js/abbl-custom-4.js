@@ -12,13 +12,17 @@ jQuery(document).ready(function($){
     			config.$bookBlock.bookblock( {
     				speed : 1000,
     				shadowSides : 0.8,
-    				shadowFlip : 0.4
+    				shadowFlip : 0.4,
     			} );
     			initEvents();
     		},
     		initEvents = function() {
     			$(".bb-item:first-child").css('display', 'block');
     			$('html').addClass('no-js demo-4');
+    			
+    			$("#item-page").on('change', function(){
+    			    config.$bookBlock.bookblock('jump', $(this).val());
+    			});
     			var $slides = config.$bookBlock.children();
     
     			// add navigation events
@@ -139,4 +143,6 @@ jQuery(document).ready(function($){
     $('body').on('click', function(){
         toggleFullScreen(1);
     });
+    
+    
 });

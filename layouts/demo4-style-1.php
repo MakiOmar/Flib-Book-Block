@@ -4,14 +4,14 @@ exit; // Exit if accessed directly
 }
 
 $page_number = 1;
-
+$page_selector = [];
 for($i = 1; $i <= $total_pages; $i++) : 
 
     $sides = [];
 
 ?>
 
-		<div class="bb-item page-<?= $i ?>">
+		<div id="item-<?= $i ?>" class="bb-item page-<?= $i ?>">
 		    <?php 
 		    
 		        $offset = ($i - 1) * $page_size;
@@ -32,9 +32,12 @@ for($i = 1; $i <= $total_pages; $i++) :
                         <div class="page-content">
                         <!--<div class="side-content">-->
                         <?php foreach($side as $item){
-                            
                         $one_product_side = (count($side) == 1) ? ' one-product-side' : '';
-                        extract($item)?>
+                        extract($item);
+                        
+                        $page_selector[$i + 1][] = $post_title;
+                        
+                        ?>
                             <div id="catalogue-itme-<?= $post_id ?>" class="catalogue-itme anony-grid-col-lg-6 anony-grid-col-max-480-6 catalogue-style-<?= ABBL_LAYOUT_FOUR_STYLE ?><?= $one_product_side ?>">
             			        <a rel="catItem" class="product-image-link" href="<?= $full_thumb_url ?>"><img class="product-image" src="<?= $thumb_url ?>"/></a>
             				    <h3 class="catalogue-itme-title"><span><?= $post_title ?></span><br/><a class="catalogue-item-details-link" href="#" data-id="<?= $post_id ?>"><?= esc_html__('Request Quote', ABBL_DOMAIN)  ?></a></h3>
@@ -54,4 +57,6 @@ for($i = 1; $i <= $total_pages; $i++) :
                 
                 $page_number++; } ?>
 		</div>
-<?php endfor ?>
+<?php endfor;
+
+?>

@@ -1,5 +1,6 @@
 .demo-4 body{
     height:100vh;
+    overflow:initial!important;
 }
 .catalogue-itme{
     text-align:center;
@@ -69,18 +70,22 @@ bottom: 10px;
     background: none;
 margin-top: 20px !important;
 }
-.bb-custom-wrapper > nav {
+div.bb-custom-wrapper > nav {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	height: auto;
 }
 div.bb-custom-wrapper > nav a {
 	margin: 0 2px;
+	background: #d24040;
 }
-.catalogue-cats{
+.catalogue-cats, .catalogue-items{
     background: #0000009c;
     color: #fff;
     border: 1px solid #ffffff8c;
     border-radius: 5px;
+    height: 41px;
 }
 .catalogue-style2-top-section, .catalogue-style2-bottom-section{
     display:flex;
@@ -218,4 +223,29 @@ z-index: 300;
 .bb-bookblock  .bb-custom-side:nth-child(even) .page-number{
     left: auto;
     right:0;
+}
+@media only screen and (max-width:480px){
+    .catalogue-cats, .catalogue-items {
+    	margin: 10px 0;
+    }
+    a img.product-image{
+        max-width:90%;
+    }
+    .catalogue-itme h3.catalogue-itme-title {
+    	font-weight: normal;
+    	font-size: 13px;
+    }
+    .side-header .catalogue-header-link {
+    	letter-spacing: 0;
+    }
+    .side-header {
+    	padding: 0 3px;
+    }
+    .bb-custom-wrapper h3.catalogue-page-title {
+    	font-size: 9px;
+    	font-weight: normal;
+    }
+    .bb-custom-side.last-page img {
+    	height: auto;
+    }
 }

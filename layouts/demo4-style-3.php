@@ -9,7 +9,7 @@ for($i = 1; $i <= $total_pages; $i++) :
 $sides = [];
 ?>
 
-		<div class="bb-item page-<?= $i ?>">
+		<div id="item-<?= $i ?>" class="bb-item page-<?= $i ?>">
 		    <?php 
 		    
 		        $offset = ($i - 1) * $page_size;

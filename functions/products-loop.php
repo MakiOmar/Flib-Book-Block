@@ -60,6 +60,22 @@ function abbl_last_page($i, $total_pages, $page_number, $sides){
     
 }
 
+function abbl_item_navigation(array $page_selector){
+    $select = "<select name='item-page' id='item-page' class='catalogue-items'>";
+    $select .= "<option value='-1'>".esc_html__('Select product', ABBL_DOMAIN)."</option>";
+    if(!empty($page_selector)){
+        foreach($page_selector as $page => $items){
+           foreach($items as $title){
+                $select.= "<option value='{$page}'>{$title}</option>";
+            } 
+        }
+    }
+    
+    $select .= "</select>";
+    
+    echo $select;
+    
+}
 function abbl_categories_dropdown(){
     global $wp;
     $requested_cat = $_GET['cat_id'] ?? '';
